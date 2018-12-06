@@ -1,0 +1,49 @@
+/* Gabriela Borges
+Data: 05/12/2018
+A especificação dos elementos de css estão sendo feitas utilizando o padrão disponível em: http://codeguide.co/
+Os blocos seguem o seguinte padrão:
+/* Positioning */
+/* Box-model */
+/* Typography */
+/* Visual */
+/* Misc */
+
+/* Objetos do TabContent */
+  .margin{
+    /* Positioning */
+    margin-top: 20px;
+    margin-left: 0;
+
+    /* Box-model */
+    width: 100%;
+
+    /* Visual */
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 3px 0 rgba(228, 228, 228, 0.5), 0 3px 5px 0 rgba(228, 228, 228, 1);
+  }
+
+  .main{
+    /* Positioning */
+    margin-top: 20px;
+
+    /* Box-model */
+    min-height: 750px;
+    width: 100%;
+  }
+
+  .select{
+    /* Box-model */
+    height: 15px;
+    width: 100%;
+  }
+
+ .bar-chart {
+    /* Positioning */
+    display:block;
+    margin:auto;
+    margin-bottom: 20px;
+
+    /* Visual */
+    background-color: white;
+ }

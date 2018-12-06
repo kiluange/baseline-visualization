@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Javascript frameworks-->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- Google Chart -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <!-- Style css-->
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/tabcontent.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <!-- Codigos js -->
+  <script src="./assets/myjs.js"></script>
+
+</head>
+
+<body>
+
+  <nav class = "menu col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <span class = "logo">
+      <img src="img/fiocruz.png"/>
+      <img src="img/cidacs.png"/>
+    </span>
+    <ul class="nav nav-pills nav-fill">
+      <li class="nav-item">
+        <a class="nav-link show active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+          <spam class="glyphicon glyphicon-home" style="color:#df8230"></spam> Introdução
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="metadados-tab" data-toggle="tab" href="#metadados" role="tab" aria-controls="metadados" aria-selected="false">
+          <spam class="glyphicon glyphicon-book" style="color:#df8230"></spam> Metadados
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          <spam class="glyphicon glyphicon-list" style="color:#df8230"></spam> Dashboard
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item"  id="univar-tab" data-toggle="tab" href="#univar" role="tab" aria-controls="univar" aria-selected="false">Análise Univariada</a>
+          <a class="dropdown-item"  id="bivar-tab" data-toggle="tab" href="#bivar" role="tab" aria-controls="bivar" aria-selected="false">Análise Bivariada</a>
+          <a class="dropdown-item"  id="espacial-tab" data-toggle="tab" href="#espacial" role="tab" aria-controls="espacial" aria-selected="false">Análise Espacial</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Tab contents -->
+  <div class="tab-content" id="myTabContent">
+    <!-- Home content -->
+    <div class="tab-pane fade main" id="home" role="tabpanel" aria-labelledby="home-tab">
+      aq
+    </div>
+
+    <!-- Metadados content -->
+    <div class="tab-pane fade main" id="metadados" role="tabpanel" aria-labelledby="metadados-tab">
+      meta
+    </div>
+
+    <!-- Univar content -->
+    <div class="tab-pane fade active main" id="univar" role="tabpanel" aria-labelledby="univar-tab">
+      <div class =  "col-lg-3 col-md-3 col-sm-12 col-xs-12 margin">
+        <p>
+          <label>Distribution type:</label><br />
+          <select id = "selectUni">
+            <option value="cod_abaste_agua_domic_fam_eq">Água</option>
+            <option value="cod_iluminacao_domic_fam_eq">Iluminação</option>
+            <option value="cod_destino_lixo_domic_fam_eq">Lixo</option>
+            <option value="cod_especie_domic_fam_eq">Especíe de Domicílio</option>
+            <option value="cod_local_domic_fam_eq">Local de Domicílio</option>
+            <option value="cod_material_domic_fam_eq">Material de Domicílio</option>
+            <option value="cod_raca_cor_pessoa_eq">Raça/Cor</option>
+            <option value="cod_sexo_pessoa_eq">Sexo</option>
+            <option value="idade_eq_cut">Idade</option>
+          </select>
+        </p>
+      </div>
+
+      <div class = "col-lg-1 col-md-1 col-sm-12 col-xs-12 "> </div>
+
+      <div class = "col-lg-8 col-md-8 col-sm-12 col-xs-12  margin" id="chart_div" style = "height: 650px;">
+      </div>
+    </div>
+
+    <!-- Bivar content -->
+    <div class="tab-pane fade main" id="bivar" role="tabpanel" aria-labelledby="bivar-tab">
+      biv
+    </div>
+
+    <!-- Espacial content -->
+    <div class="tab-pane fade main" id="espacial" role="tabpanel" aria-labelledby="espacial-tab">
+      espacial
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class = "footer">
+    <span class = "logo">
+      <img src="img/colab.png" class = "center logo"/>
+    </span>
+  </div>
+
+</body>
+</html>
