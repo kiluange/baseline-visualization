@@ -7,7 +7,7 @@
     padding-right: 0;
 
     /* Box-model */
-    height: 60px;
+    height: 85px;
     width: 100%;
 
     /* Visual */
@@ -21,10 +21,16 @@
   }
 
   .center{
+    /* Positioning */
     position: absolute;
     margin: auto;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+
+    /* Box-model */
+    width: 100%;
+    max-width: 1302px;;
+    height: auto;
   }
