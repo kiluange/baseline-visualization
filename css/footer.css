@@ -3,6 +3,8 @@
     /* Positioning */
     margin-top: 20px;
     position: relative;
+    padding-left: 0;
+    padding-right: 0;
 
     /* Box-model */
     height: 60px;

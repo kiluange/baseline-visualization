@@ -22,7 +22,8 @@
   <link rel="stylesheet" href="css/footer.css">
 
   <!-- Codigos js -->
-  <script src="./assets/myjs.js"></script>
+  <script src="./assets/barchart.js"></script>
+  <script src="./assets/slider.js"></script>
 
 </head>
 
@@ -72,20 +73,26 @@
     <!-- Univar content -->
     <div class="tab-pane fade active main" id="univar" role="tabpanel" aria-labelledby="univar-tab">
       <div class =  "col-lg-3 col-md-3 col-sm-12 col-xs-12 margin">
-        <p>
-          <label>Distribution type:</label><br />
+        <label>Distribution type:</label><br  />
+        <div class = "input">
           <select id = "selectUni">
-            <option value="cod_abaste_agua_domic_fam_eq">Água</option>
-            <option value="cod_iluminacao_domic_fam_eq">Iluminação</option>
-            <option value="cod_destino_lixo_domic_fam_eq">Lixo</option>
-            <option value="cod_especie_domic_fam_eq">Especíe de Domicílio</option>
-            <option value="cod_local_domic_fam_eq">Local de Domicílio</option>
-            <option value="cod_material_domic_fam_eq">Material de Domicílio</option>
-            <option value="cod_raca_cor_pessoa_eq">Raça/Cor</option>
-            <option value="cod_sexo_pessoa_eq">Sexo</option>
-            <option value="idade_eq_cut">Idade</option>
+            <option value=cod_abaste_agua_domic_fam_eq>Água</option>
+            <option value=cod_destino_lixo_domic_fam_eq>Lixo</option>
+            <option value=cod_escoa_sanitario_domic_fam_eq>Escoamento Sanitário</option>
+            <option value=cod_especie_domic_fam_eq>Especíe de Domicílio</option>
+            <option value=cod_iluminacao_domic_fam_eq>Iluminação</option>
+            <option value=cod_local_domic_fam_eq>Local de Domicílio</option>
+            <option value=cod_material_domic_fam_eq>Material de Domicílio</option>
+            <option value=cod_raca_cor_pessoa_eq>Raça/Cor</option>
+            <option value=cod_sexo_pessoa_eq>Sexo</option>
+            <option value=idade_eq_cut>Idade</option>
+            <option value=in_def_surdez_memb_eq>Surdez</option>
+            <option value=ind_def_cegueira_memb_eq>Cegueira</option>
+            <option value=ind_def_fisica_memb_eq>Deficiência Física</option>
+            <option value=ind_def_mental_memb_eq>Deficiência Mental</option>
+            <option value=ind_frequenta_escola_memb_eq>Frequenta Escola</option>
           </select>
-        </p>
+        </div>
       </div>
 
       <div class = "col-lg-1 col-md-1 col-sm-12 col-xs-12 "> </div>
@@ -107,7 +114,7 @@
   </div>
 
   <!-- Footer -->
-  <div class = "footer">
+  <div class = "footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <span class = "logo">
       <img src="img/colab.png" class = "center logo"/>
     </span>

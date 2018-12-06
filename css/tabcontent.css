@@ -16,6 +16,7 @@ Os blocos seguem o seguinte padrão:
 
     /* Box-model */
     width: 100%;
+    min-height: 50px;;
 
     /* Visual */
     background-color: white;
@@ -29,12 +30,6 @@ Os blocos seguem o seguinte padrão:
 
     /* Box-model */
     min-height: 750px;
-    width: 100%;
-  }
-
-  .select{
-    /* Box-model */
-    height: 15px;
     width: 100%;
   }
 

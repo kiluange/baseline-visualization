@@ -1,0 +1,9 @@
+## EM R
+df <- read_csv("L:/Projeto Shiny Coorte/tabela_1_1.csv")
+ 
+df %>% 
+  select(-X1) %>% 
+  write_json("L:/json-data/tabela_univariada.json")
+
+## No terminal
+json-server --watch L:/json-data/tabela_univariada.json
