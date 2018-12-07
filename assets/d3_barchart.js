@@ -1,3 +1,4 @@
+$(document).ready(function(){
  var svgWidth = 600;
  var svgHeight = 300;
 
@@ -36,3 +37,4 @@
    d3.select(this)
     .attr({fill: "#f4be01"})
    });
+})

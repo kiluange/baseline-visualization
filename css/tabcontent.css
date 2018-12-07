@@ -42,3 +42,21 @@ Os blocos seguem o seguinte padrão:
     /* Visual */
     background-color: white;
  }
+
+ #br-states2{
+   /* Positioning */
+   display:block;
+   margin:auto;
+   margin-bottom: 20px;
+ }
+
+.state{
+   /* Visual */
+   fill:#c04316;
+   stroke: black;
+   stroke-width:1px;
+ }
+
+.state:hover{
+  fill:#f4be01;
+}

@@ -7,3 +7,5 @@ df %>%
 
 ## No terminal
 json-server --watch L:/json-data/tabela_univariada.json
+
+json-server --watch C:\Users\gabriela.lima\Documents\GitHub\baseline-visualization\data\br-states.json
