@@ -1,7 +1,7 @@
 $(document).ready(function(){
   // Define map size on screen
   var margin = {top: 10, left: 10, bottom: 10, right: 10};
-  var width = 1500;
+  var width = 1000;
   var height = 600;
 
   var svg = d3.select("#br-states")
@@ -43,7 +43,18 @@ $(document).ready(function(){
       .enter()
       .append("path")
       .attr("class", "state")
-      .attr("d", path);
+      .attr("d", path)
+      .style("fill", "#c04316")
+      .style("stroke", "white")
+      .style("stroke-width", "1px")
+      .on("mouseover", function(d){
+        d3.select(this)
+          .style("fill", "#f4be01");
+      })
+      .on("mouseout", function(d){
+        d3.select(this)
+          .style("fill", "#c04316")
+      });
   }
 
   // What to do when zooming

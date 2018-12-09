@@ -9,6 +9,7 @@
 
   <!-- Javascript frameworks-->
   <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
   <script src="https://d3js.org/d3-queue.v2.min.js"></script>
   <script src="https://d3js.org/topojson.v1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -94,14 +95,15 @@
             <option value=ind_def_mental_memb_eq>Deficiência Mental</option>
             <option value=ind_frequenta_escola_memb_eq>Frequenta Escola</option>
           </select>
-        </div>
 
-        <svg id = "br-states2" style="width:100%;height:200px"></svg>
+          <svg id = "states-filtro" style="width:100%;height:200px"></svg>
+        </div>
       </div>
 
       <div class = "col-lg-1 col-md-1 col-sm-12 col-xs-12 "> </div>
 
-      <div class = "col-lg-8 col-md-8 col-sm-12 col-xs-12  margin" id="chart_div" style = "height: 650px;">
+      <div class = "col-lg-8 col-md-8 col-sm-12 col-xs-12  margin" style = "height: 650px;">
+        <svg id = "bar-plot" style="width:100%;height:100%"></svg>
       </div>
     </div>
 
@@ -112,7 +114,7 @@
 
       <div class = "col-lg-1 col-md-1 col-sm-12 col-xs-12"> </div>
 
-      <div class = "col-lg-8 col-md-8 col-sm-12 col-xs-12 margin" id = "pieChart" style = "height: 650px;">
+      <div class = "col-lg-8 col-md-8 col-sm-12 col-xs-12 margin" style = "height: 650px;">
       </div>
 
     </div>

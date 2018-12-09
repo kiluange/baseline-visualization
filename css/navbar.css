@@ -23,6 +23,9 @@ Os blocos seguem o seguinte padrão:
     /* Box-model */
     height: 100%;
 
+    /* Typography */
+    font-size: 20px;
+
     /* Visual */
     background-color: white;
   }
@@ -61,7 +64,6 @@ Os blocos seguem o seguinte padrão:
 
     /* Typography */
     text-align: center;
-    font-size:18px;
 
     /* Visual */
     border-radius: 0px; !important
@@ -77,6 +79,7 @@ Os blocos seguem o seguinte padrão:
     text-decoration: none;
     text-align: center;
     line-height: 60px;
+    font-size: 22px;
 
     /* Visual */
     background-color: white;

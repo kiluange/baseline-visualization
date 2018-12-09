@@ -43,20 +43,55 @@ Os blocos seguem o seguinte padrão:
     background-color: white;
  }
 
- #br-states2{
-   /* Positioning */
-   display:block;
-   margin:auto;
-   margin-bottom: 20px;
- }
+ .axis path,
+ .axis line {
+    /* Visual */
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
 
-.state{
-   /* Visual */
-   fill:#c04316;
-   stroke: black;
-   stroke-width:1px;
- }
+  .y.axis path {
+    /* Positioning */
+    display: none;
+  }
 
-.state:hover{
-  fill:#f4be01;
-}
+  .d3-tip {
+    /* Positioning */
+    padding: 12px;
+    line-height: 1;
+
+     /* Visual */
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+  }
+
+  /* Creates a small triangle extender for the tooltip */
+  .d3-tip:after {
+    /* Positioning */
+    line-height: 1;
+    display: inline;
+    position: absolute;
+
+    /* Box-model */
+    width: 100%;
+    box-sizing: border-box;
+
+    /* Typography */
+    font-size: 10px;
+    text-align: center;
+
+    /* Visual */
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+  }
+
+  /* Style northward tooltips differently */
+  .d3-tip.n:after {
+    /* Positioning */
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+  }

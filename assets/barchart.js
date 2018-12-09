@@ -8,7 +8,7 @@ function drawAxisTickColors() {
       $.ajax({
           'async': false,
           'global': false,
-          'url': "http://localhost:3000/tabela",
+          'url': "http://localhost:5000/tabela",
           'dataType': "json",
           'success': function (data) {
             json = data.filter(d=>d["variavel"]==selected_var);
@@ -27,7 +27,7 @@ function drawAxisTickColors() {
       ];
 
       for(var i=0;i<varbynivel.length;i++){
-        var row = [varbynivel[i].key , varbynivel[i].value];
+        var row = [varbynivel[i].key , +varbynivel[i].values];
         data.push(row);
       };
 

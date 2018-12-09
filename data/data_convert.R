@@ -2,12 +2,11 @@ library(dplyr)
 library(readr)
 library(jsonlite)
 
-df <- read_csv("L:/Projeto Shiny Coorte/tabela_1_1.csv")
+df <- read_csv("C:/Users/sanin/Downloads/tabela_1_1.csv") %>% 
+  select(-X1)
  
 df %>% 
-  select(-X1) %>% 
-  write_json("L:/json-data/tabela_univariada.json")
-
+  write_json("C:/Users/sanin/Documents/tabela_univariada.json")
 
 option_select <- paste0(paste0("<option value=",df %>% 
   group_by(variavel) %>% 
