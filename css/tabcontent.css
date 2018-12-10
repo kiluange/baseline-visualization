@@ -16,7 +16,7 @@ Os blocos seguem o seguinte padrão:
 
     /* Box-model */
     width: 100%;
-    min-height: 50px;;
+    min-height: 200px;
 
     /* Visual */
     background-color: white;
@@ -32,16 +32,6 @@ Os blocos seguem o seguinte padrão:
     min-height: 750px;
     width: 100%;
   }
-
- .bar-chart {
-    /* Positioning */
-    display:block;
-    margin:auto;
-    margin-bottom: 20px;
-
-    /* Visual */
-    background-color: white;
- }
 
  .axis path,
  .axis line {
@@ -94,4 +84,19 @@ Os blocos seguem o seguinte padrão:
     margin: -1px 0 0 0;
     top: 100%;
     left: 0;
+  }
+
+  .input {
+    /* Box-model */
+    width:100%;  /* Tamanho final do select */
+    overflow:hidden; /* Esconde o conteúdo que passar do tamanho especificado */
+  }
+
+  #selectUni{
+    /* Box-model */
+    width: 100%;
+    height: 40px;
+
+    /* Visual */
+    border-radius: 6px !important;
   }

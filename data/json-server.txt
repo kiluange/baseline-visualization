@@ -1,11 +1,27 @@
 ## EM R
-df <- read_csv("L:/Projeto Shiny Coorte/tabela_1_1.csv")
- 
+library(dplyr)
+library(readr)
+library(jsonlite)
+
+file = "colocar file do storage onde tem a base original"
+df <- read_csv(file) %>% 
+  select(-X1)
+
+levels = c(11:17, 21:29, 31:33, 35, 41:43, 50:53, 0)
+labels = c("RO", "AC", 'AM', 'RR', 'PA','AP','TO',
+           'MA', 'PI', 'CE', 'RN', 'PB', 'PE', 'AL', 'SE', 'BA',
+           'MG', 'ES', 'RJ', 'SP',
+           'PR', 'SC','RS',
+           'MS', 'MT','GO', 'DF', "NA")
+
 df %>% 
-  select(-X1) %>% 
+  mutate(cod_munic_ibge_2_fam_eq = factor(cod_munic_ibge_2_fam_eq, levels = levels,
+                                          labels = labels)) %>% 
   write_json("L:/json-data/tabela_univariada.json")
 
+##################################################################### NO TERMINAL ########################################################################
 ## No terminal
-json-server --watch L:/json-data/tabela_univariada.json
+json-server --watch L:/json-data/tabela_univariada.json -p 5000
 
-json-server --watch C:\Users\gabriela.lima\Documents\GitHub\baseline-visualization\data\br-states.json
+## ABRE OUTRO TERMINAL
+json-server --watch C:/Users/gabriela.lima/Documents/GitHub/baseline-visualization/data/br-states.json
