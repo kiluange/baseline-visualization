@@ -124,7 +124,27 @@
     <!-- Espacial content -->
     <div class = "tab-pane fade main" id = "espacial" role = "tabpanel" aria-labelledby="espacial-tab">
         <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12 margin" id = "mapa" style = "height: 650px;padding:0;">
-          <div  id = "arrastavel">
+          <div  class = "arrastavel" style = "margin-top: 470px;">
+            <label> Selecione a Variável</label>
+            <select class = "select" id = "id_var">
+              <option value=cod_abaste_agua_domic_fam_eq>Água</option>
+              <option value=cod_destino_lixo_domic_fam_eq>Lixo</option>
+              <option value=cod_escoa_sanitario_domic_fam_eq>Escoamento Sanitário</option>
+              <option value=cod_especie_domic_fam_eq>Especíe de Domicílio</option>
+              <option value=cod_iluminacao_domic_fam_eq>Iluminação</option>
+              <option value=cod_local_domic_fam_eq>Local de Domicílio</option>
+              <option value=cod_material_domic_fam_eq>Material de Domicílio</option>
+              <option value=cod_raca_cor_pessoa_eq>Raça/Cor</option>
+              <option value=cod_sexo_pessoa_eq>Sexo</option>
+              <option value=idade_eq_cut>Idade</option>
+              <option value=in_def_surdez_memb_eq>Surdez</option>
+              <option value=ind_def_cegueira_memb_eq>Cegueira</option>
+              <option value=ind_def_fisica_memb_eq>Deficiência Física</option>
+              <option value=ind_def_mental_memb_eq>Deficiência Mental</option>
+              <option value=ind_frequenta_escola_memb_eq>Frequenta Escola</option>
+            </select>
+          </div>
+          <div  class = "arrastavel" id = "id_arrastavel" style = "margin-top: 560px;">
             <div id = "arrastavelheader"></div>
           </div>
           <svg id = "br-states" style="width:100%;height:100%"></svg>

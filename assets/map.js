@@ -41,18 +41,6 @@ $(document).ready(function(){
       };
 
     var dados = dataset(selected_var);
-    var dropdown = d3.select("#arrastavel")
-                     .html("<label>Selecione</label> <br>")
-                     .append("select")
-                     .attr("id", "id_select")
-
-    dropdown.selectAll("options")
-            .data(dados)
-            .enter()
-            .append("option")
-            .attr("value", function(d){return d.key;})
-            .text(function(d){return d.key;})
-
     return(dados);
   }
 
@@ -115,7 +103,7 @@ $(document).ready(function(){
     // Align center of Brazil to center of map
     var projection = d3.geo.mercator()
     .scale(width)
-    .center([-width/11, -14])
+    .center([-width/12.5, -14])
     .translate([width / 2, height / 2]);
 
     var path = d3.geo.path()
@@ -250,10 +238,42 @@ $(document).ready(function(){
   }
   d3.select(self.frameElement).style("height", height + "px");
 
-  dados_var = calcular_dados("cod_material_domic_fam_eq");
-  var categoria_sel = "Madeira";
+  function dados_mapa(selected_var){
+    dados_var = calcular_dados(selected_var);
 
-  dados = calcular_categoria(dados_var, brasil, categoria_sel);
-  fazer_mapa(dados);
+    var dropdown = d3.select("#id_arrastavel")
+                     .html("<label>Selecione categoria:</label> <br>")
+                     .append("select")
+                     .attr("class", "select")
+                     .attr("id", "id_select")
+                     .on("change", update_map);
+
+    dropdown.selectAll("options")
+            .data(dados_var)
+            .enter()
+            .append("option")
+            .attr("value", function(d){return d.key;})
+            .text(function(d){return d.key;});
+
+    function update_map(){
+      categoria_sel = d3.select('#id_select').property('value')
+      svg.selectAll("*").remove();
+      dados = calcular_categoria(dados_var, brasil, categoria_sel);
+      fazer_mapa(dados);
+    }
+
+    categoria_sel = d3.select('#id_select').property('value');
+    dados = calcular_categoria(dados_var, brasil, categoria_sel);
+    fazer_mapa(dados);
+  }
+
+  var selected_var = $('#id_var option:selected').val();
+  dados_mapa(selected_var);
+
+  $('#id_var').on('change',function(){
+      var selected_var = $('#id_var option:selected').val();
+      svg.selectAll("*").remove();
+      dados_mapa(selected_var);
+  });
 
 })
