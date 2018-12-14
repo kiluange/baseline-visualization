@@ -1,0 +1,23 @@
+{
+  "name": "baseline-visualization",
+  "version": "1.0.0",
+  "description": "Projeto de visualização de dados",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiluange/baseline-visualization.git"
+  },
+  "author": "gabiborges1, kiluange",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiluange/baseline-visualization/issues"
+  },
+  "homepage": "https://github.com/kiluange/baseline-visualization#readme",
+  "dependencies": {
+    "vue": "^2.5.21",
+    "vue-router": "^3.0.2"
+  }
+}

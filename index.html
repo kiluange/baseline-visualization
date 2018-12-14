@@ -2,21 +2,24 @@
 <html>
 
 <head>
-  <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
   <!-- Javascript frameworks-->
   <script src="https://d3js.org/d3.v3.min.js"></script>
-  <script src = "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
   <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
   <script src="https://d3js.org/d3-queue.v2.min.js"></script>
   <script src="https://d3js.org/topojson.v1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 
   <!-- Google Chart -->
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -35,53 +38,61 @@
 
 <body>
 
-  <div class = "menu col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <span class = "logo">
-      <img src="img/fiocruz.png"/>
-      <img src="img/cidacs.png"/>
+  <div class="menu col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <span class="logo">
+      <img src="img/fiocruz.png" />
+      <img src="img/cidacs.png" />
     </span>
     <ul class="nav nav-pills nav-fill">
       <li class="nav-item">
-        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
-          <spam class="glyphicon glyphicon-home" style="color:#df8230"></spam> Introdução
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+          aria-selected="true">
+          <spam class="glyphicon glyphicon-home" style="color:#df8230"></spam> Início
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="metadados-tab" data-toggle="tab" href="#metadados" role="tab" aria-controls="metadados" aria-selected="false">
+        <a class="nav-link" id="metadados-tab" data-toggle="tab" href="#metadados" role="tab" aria-controls="metadados"
+          aria-selected="false">
           <spam class="glyphicon glyphicon-book" style="color:#df8230"></spam> Metadados
         </a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+          aria-expanded="false">
           <spam class="glyphicon glyphicon-list" style="color:#df8230"></spam> Dashboard
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item"  id="univar-tab" data-toggle="tab" href="#univar" role="tab" aria-controls="univar" aria-selected="false">Análise Univariada</a>
-          <a class="dropdown-item disabled"  id="bivar-tab" data-toggle="tab" href="#bivar" role="tab" aria-controls="bivar" aria-selected="false">Análise Bivariada</a>
-          <a class="dropdown-item"  id="espacial-tab" data-toggle="tab" href="#espacial" role="tab" aria-controls="espacial" aria-selected="false">Análise Espacial</a>
+          <a class="dropdown-item" id="univar-tab" data-toggle="tab" href="#univar" role="tab" aria-controls="univar"
+            aria-selected="false">Análise Univariada</a>
+          <a class="dropdown-item disabled" id="bivar-tab" data-toggle="tab" href="#bivar" role="tab" aria-controls="bivar"
+            aria-selected="false">Análise Bivariada</a>
+          <a class="dropdown-item" id="espacial-tab" data-toggle="tab" href="#espacial" role="tab" aria-controls="espacial"
+            aria-selected="false">Análise Espacial</a>
         </div>
       </li>
     </ul>
   </div>
 
   <!-- Tab contents -->
-  <div class = "tab-content" id = "myTabContent">
+  <div class="tab-content" id="myTabContent">
     <!-- Home content -->
-    <div class = "tab-pane fade show active main" id = "home" role = "tabpanel" aria-labelledby = "home-tab">
-      aq
+    <div class="tab-pane fade show active main" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <p>O mACS é um projeto de pesquisa para incorporar tecnologias móveis (mHealth) a rotina de trabalho da
+        Estratégia de Saúde da Família do SUS. Ao fazê-lo, o mACS pretende possibilitar a análise inteligente e
+        automática dos dados (big data) para gerar informações relevantes acerca da saúde pública no Brasil.</p>
     </div>
 
     <!-- Metadados content -->
-    <div class = "tab-pane fade main" id = "metadados" role = "tabpanel" aria-labelledby = "metadados-tab">
+    <div class="tab-pane fade main" id="metadados" role="tabpanel" aria-labelledby="metadados-tab">
       meta
     </div>
 
     <!-- Univar content -->
-    <div class = "tab-pane fade main" id = "univar" role = "tabpanel" aria-labelledby = "univar-tab">
-      <div class = "col-lg-3 col-md-3 col-sm-12 col-xs-12 margin" style = "padding:10px;  ">
-        <label>Selecione uma variável:</label><br  />
-        <div class = "input">
-          <select class = "select" id = "selectUni">
+    <div class="tab-pane fade main" id="univar" role="tabpanel" aria-labelledby="univar-tab">
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 margin" style="padding:10px;  ">
+        <label>Selecione uma variável:</label><br />
+        <div class="input">
+          <select class="select" id="selectUni">
             <option value=cod_abaste_agua_domic_fam_eq>Água</option>
             <option value=cod_destino_lixo_domic_fam_eq>Lixo</option>
             <option value=cod_escoa_sanitario_domic_fam_eq>Escoamento Sanitário</option>
@@ -98,66 +109,67 @@
             <option value=ind_def_mental_memb_eq>Deficiência Mental</option>
             <option value=ind_frequenta_escola_memb_eq>Frequenta Escola</option>
           </select>
-          <svg id = "states-filtro" style="width:100%;height:300px"></svg>
+          <svg id="states-filtro" style="width:100%;height:300px"></svg>
         </div>
       </div>
 
-      <div class = "col-lg-1 col-md-1 col-sm-12 col-xs-12 "> </div>
+      <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12 "> </div>
 
-      <div class = "col-lg-8 col-md-8 col-sm-12 col-xs-12  margin" style = "height: 650px;padding:0;">
-        <svg id = "bar-plot" style = "width:100%;height:100%"></svg>
+      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12  margin" style="height: 650px;padding:0;">
+        <svg id="bar-plot" style="width:100%;height:100%"></svg>
       </div>
     </div>
 
     <!-- Bivar content -->
-    <div class = "tab-pane fade main" id = "bivar" role="tabpanel" aria-labelledby="bivar-tab">
-      <div class = "col-lg-3 col-md-3 col-sm-12 col-xs-12 margin">
+    <div class="tab-pane fade main" id="bivar" role="tabpanel" aria-labelledby="bivar-tab">
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 margin">
       </div>
 
-      <div class = "col-lg-1 col-md-1 col-sm-12 col-xs-12"> </div>
+      <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12"> </div>
 
-      <div class = "col-lg-8 col-md-8 col-sm-12 col-xs-12 margin" style = "height: 650px;">
+      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 margin" style="height: 650px;">
       </div>
 
     </div>
 
     <!-- Espacial content -->
-    <div class = "tab-pane fade main" id = "espacial" role = "tabpanel" aria-labelledby="espacial-tab">
-        <div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12 margin" id = "mapa" style = "height: 650px;padding:0;">
-          <div  class = "arrastavel" style = "margin-top: 470px;">
-            <label> Selecione a Variável</label>
-            <select class = "select" id = "id_var">
-              <option value=cod_abaste_agua_domic_fam_eq>Água</option>
-              <option value=cod_destino_lixo_domic_fam_eq>Lixo</option>
-              <option value=cod_escoa_sanitario_domic_fam_eq>Escoamento Sanitário</option>
-              <option value=cod_especie_domic_fam_eq>Especíe de Domicílio</option>
-              <option value=cod_iluminacao_domic_fam_eq>Iluminação</option>
-              <option value=cod_local_domic_fam_eq>Local de Domicílio</option>
-              <option value=cod_material_domic_fam_eq>Material de Domicílio</option>
-              <option value=cod_raca_cor_pessoa_eq>Raça/Cor</option>
-              <option value=cod_sexo_pessoa_eq>Sexo</option>
-              <option value=idade_eq_cut>Idade</option>
-              <option value=in_def_surdez_memb_eq>Surdez</option>
-              <option value=ind_def_cegueira_memb_eq>Cegueira</option>
-              <option value=ind_def_fisica_memb_eq>Deficiência Física</option>
-              <option value=ind_def_mental_memb_eq>Deficiência Mental</option>
-              <option value=ind_frequenta_escola_memb_eq>Frequenta Escola</option>
-            </select>
-          </div>
-          <div  class = "arrastavel" id = "id_arrastavel" style = "margin-top: 560px;">
-            <div id = "arrastavelheader"></div>
-          </div>
-          <svg id = "br-states" style="width:100%;height:100%"></svg>
+    <div class="tab-pane fade main" id="espacial" role="tabpanel" aria-labelledby="espacial-tab">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin" id="mapa" style="height: 650px;padding:0;">
+        <div class="arrastavel" style="margin-top: 470px;">
+          <label> Selecione a Variável</label>
+          <select class="select" id="id_var">
+            <option value=cod_abaste_agua_domic_fam_eq>Água</option>
+            <option value=cod_destino_lixo_domic_fam_eq>Lixo</option>
+            <option value=cod_escoa_sanitario_domic_fam_eq>Escoamento Sanitário</option>
+            <option value=cod_especie_domic_fam_eq>Especíe de Domicílio</option>
+            <option value=cod_iluminacao_domic_fam_eq>Iluminação</option>
+            <option value=cod_local_domic_fam_eq>Local de Domicílio</option>
+            <option value=cod_material_domic_fam_eq>Material de Domicílio</option>
+            <option value=cod_raca_cor_pessoa_eq>Raça/Cor</option>
+            <option value=cod_sexo_pessoa_eq>Sexo</option>
+            <option value=idade_eq_cut>Idade</option>
+            <option value=in_def_surdez_memb_eq>Surdez</option>
+            <option value=ind_def_cegueira_memb_eq>Cegueira</option>
+            <option value=ind_def_fisica_memb_eq>Deficiência Física</option>
+            <option value=ind_def_mental_memb_eq>Deficiência Mental</option>
+            <option value=ind_frequenta_escola_memb_eq>Frequenta Escola</option>
+          </select>
         </div>
+        <div class="arrastavel" id="id_arrastavel" style="margin-top: 560px;">
+          <div id="arrastavelheader"></div>
+        </div>
+        <svg id="br-states" style="width:100%;height:100%"></svg>
+      </div>
     </div>
 
   </div>
 
   <!-- Footer -->
-  <div class = "footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <span class = "logo">
-      <img src = "img/footer.png" class = "center logo"/>
+  <div class="footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <span class="logo">
+      <img src="img/footer.png" class="center logo" />
     </span>
   </div>
 </body>
+
 </html>
