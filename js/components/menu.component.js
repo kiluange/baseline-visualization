@@ -15,9 +15,9 @@ export const MenuBar = Vue.component('menu-bar', {
   <li class="nav-item dropdown">
   <router-link class="nav-link dropdown-toggle" data-toggle="dropdown" to="/dashboard">Dashboard</router-link>
   <div class="dropdown-menu dropdown-menu-right">
-      <router-link class="dropdown-item" to="/metadados">Metadados</router-link>
-      <router-link class="dropdown-item" to="/metadados">Metadados</router-link>
-      <router-link class="dropdown-item" to="/metadados">Metadados</router-link>
+      <router-link class="dropdown-item" to="/metadados">Domiciliar</router-link>
+      <router-link class="dropdown-item" to="/metadados">Familiar</router-link>
+      <router-link class="dropdown-item" to="/metadados">Individual</router-link>
     </div>
   </li>
 </ul>
