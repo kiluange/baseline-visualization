@@ -7,6 +7,15 @@ import {
 import {
     Meta
 } from './js/components/metadados.component.js';
+import {
+    Domiciliar
+} from './js/components/domiciliar.component.js';
+import {
+    Individual
+} from './js/components/individual.component.js';
+import {
+    Familiar
+} from './js/components/familiar.component.js';
 
 const routes = [{
         path: '/inicio',
@@ -19,7 +28,19 @@ const routes = [{
     {
         path: '/dashboard',
         component: Home
-    }
+    },
+    {
+        path: '/dashboard/domciliar',
+        component: Domiciliar
+    },
+    {
+        path: '/dashboard/familiar',
+        component: Familiar
+    },
+    {
+        path: '/dashboard/individual',
+        component: Individual
+    },
 ];
 
 const router = new VueRouter({
@@ -31,7 +52,10 @@ var app = new Vue({
     components: {
         MenuBar,
         Home,
-        Meta
+        Meta,
+        Domiciliar,
+        Familiar,
+        Individual
     }
 
 }).$mount('#app');
