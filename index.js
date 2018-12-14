@@ -8,6 +8,9 @@ import {
     Meta
 } from './js/components/metadados.component.js';
 import {
+    Dashboard
+} from './js/components/dashboard.component.js';
+import {
     Domiciliar
 } from './js/components/domiciliar.component.js';
 import {
@@ -28,6 +31,10 @@ const routes = [{
     {
         path: '/dashboard',
         component: Home
+    },
+    {
+        path: '/dashboard',
+        component: Dashboard
     },
     {
         path: '/dashboard/domciliar',
@@ -55,7 +62,8 @@ var app = new Vue({
         Meta,
         Domiciliar,
         Familiar,
-        Individual
+        Individual,
+        Dashboard
     }
 
 }).$mount('#app');
